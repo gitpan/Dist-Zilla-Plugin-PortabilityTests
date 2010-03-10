@@ -1,0 +1,37 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/hanekomu/Dist-Zilla-Plugin-PortabilityTests"
+   },
+   "generated_by" : "Dist::Zilla version 1.100660",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "1.100690",
+   "name" : "Dist-Zilla-Plugin-PortabilityTests",
+   "author" : [
+      "Marcel Gruenauer <marcel@cpan.org>"
+   ],
+   "license" : "perl",
+   "build_requires" : {},
+   "provides" : {
+      "Dist::Zilla::Plugin::PortabilityTests" : {
+         "version" : "1.100690",
+         "file" : "lib/Dist/Zilla/Plugin/PortabilityTests.pm"
+      }
+   },
+   "requires" : {
+      "English" : "0",
+      "Test::More" : "0",
+      "perl" : "5.008",
+      "File::Find" : "0",
+      "Test::Portability::Files" : "0",
+      "File::Temp" : "0",
+      "Moose" : "0",
+      "Dist::Zilla::Plugin::InlineFiles" : "0"
+   },
+   "abstract" : "release tests for portability",
+   "configure_requires" : {
+      "ExtUtils::MakeMaker" : "6.11"
+   }
+}
