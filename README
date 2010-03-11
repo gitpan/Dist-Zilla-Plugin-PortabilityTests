@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::PortabilityTests - release tests for portability
 
 VERSION
-    version 1.100690
+    version 1.100700
 
 SYNOPSIS
     In "dist.ini":
@@ -18,6 +18,24 @@ DESCRIPTION
 INSTALLATION
     See perlmodinstall for information and options on installing Perl
     modules.
+
+BUGS AND LIMITATIONS
+    No bugs have been reported.
+
+    Please report any bugs or feature requests through the web interface at
+    <http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Port
+    abilityTests>.
+
+AVAILABILITY
+    The latest version of this module is available from the Comprehensive
+    Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
+    CPAN site near you, or see
+    <http://search.cpan.org/dist/Dist-Zilla-Plugin-PortabilityTests/>.
+
+    The development version lives at
+    <http://github.com/hanekomu/Dist-Zilla-Plugin-PortabilityTests/>.
+    Instead of sending patches, please fork this project using the standard
+    git and github infrastructure.
 
 AUTHOR
       Marcel Gruenauer <marcel@cpan.org>
