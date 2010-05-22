@@ -1,41 +1,44 @@
 {
-   "resources" : {
-      "homepage" : "http://search.cpan.org/dist/Dist-Zilla-Plugin-PortabilityTests/",
-      "repository" : "http://github.com/hanekomu/Dist-Zilla-Plugin-PortabilityTests",
-      "bugtracker" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-PortabilityTests"
-   },
-   "generated_by" : "Dist::Zilla version 1.100660",
-   "meta-spec" : {
-      "version" : 1.4,
-      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
-   },
-   "version" : "1.100700",
-   "name" : "Dist-Zilla-Plugin-PortabilityTests",
+   "abstract" : "Release tests for portability",
    "author" : [
       "Marcel Gruenauer <marcel@cpan.org>"
    ],
-   "license" : "perl",
-   "build_requires" : {},
-   "provides" : {
-      "Dist::Zilla::Plugin::PortabilityTests" : {
-         "version" : "1.100700",
-         "file" : "lib/Dist/Zilla/Plugin/PortabilityTests.pm"
-      }
-   },
-   "requires" : {
-      "Scalar::Util" : "0",
-      "English" : "0",
+   "build_requires" : {
       "Carp" : "0",
-      "perl" : "5.008",
-      "Test::More" : "0",
-      "Test::Portability::Files" : "0",
+      "English" : "0",
       "File::Find" : "0",
       "File::Temp" : "0",
-      "Moose" : "0",
-      "Dist::Zilla::Plugin::InlineFiles" : "0"
+      "Scalar::Util" : "0",
+      "Test::More" : "0.94"
    },
-   "abstract" : "release tests for portability",
    "configure_requires" : {
-      "ExtUtils::MakeMaker" : "6.11"
-   }
+      "ExtUtils::MakeMaker" : "6.31"
+   },
+   "generated_by" : "Dist::Zilla version 2.100960",
+   "license" : "perl",
+   "meta-spec" : {
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html",
+      "version" : 1.4
+   },
+   "name" : "Dist-Zilla-Plugin-PortabilityTests",
+   "provides" : {
+      "Dist::Zilla::Plugin::PortabilityTests" : {
+         "file" : "lib/Dist/Zilla/Plugin/PortabilityTests.pm",
+         "version" : "1.101420"
+      }
+   },
+   "recommends" : {},
+   "requires" : {
+      "Dist::Zilla::Plugin::InlineFiles" : "0",
+      "Moose" : "0",
+      "Test::Portability::Files" : "0",
+      "perl" : "5.008"
+   },
+   "resources" : {
+      "bugtracker" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-PortabilityTests",
+      "homepage" : "http://search.cpan.org/dist/Dist-Zilla-Plugin-PortabilityTests/",
+      "repository" : "http://github.com/hanekomu/Dist-Zilla-Plugin-PortabilityTests"
+   },
+   "version" : "1.101420"
 }
+

@@ -3,10 +3,11 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::PortabilityTests;
-our $VERSION = '1.100700';
-# ABSTRACT: release tests for portability
+BEGIN {
+  $Dist::Zilla::Plugin::PortabilityTests::VERSION = '1.101420';
+}
+# ABSTRACT: Release tests for portability
 use Moose;
-use Test::Portability::Files ();
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
 __PACKAGE__->meta->make_immutable;
@@ -20,11 +21,11 @@ no Moose;
 
 =head1 NAME
 
-Dist::Zilla::Plugin::PortabilityTests - release tests for portability
+Dist::Zilla::Plugin::PortabilityTests - Release tests for portability
 
 =head1 VERSION
 
-version 1.100700
+version 1.101420
 
 =head1 SYNOPSIS
 
@@ -35,7 +36,7 @@ In C<dist.ini>:
 =head1 DESCRIPTION
 
 This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
-following files
+following file:
 
   xt/release/portability.t - a standard Test::Portability::Files test
 

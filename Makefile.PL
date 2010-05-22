@@ -4,7 +4,7 @@ use warnings;
 
  BEGIN { require 5.008; } 
 
-use ExtUtils::MakeMaker 6.11;
+use ExtUtils::MakeMaker 6.31;
 
 
 
@@ -15,30 +15,34 @@ my %WriteMakefileArgs = (
                        'NAME' => 'Dist::Zilla::Plugin::PortabilityTests',
                        'DISTNAME' => 'Dist-Zilla-Plugin-PortabilityTests',
                        'CONFIGURE_REQUIRES' => {
-                                                 'ExtUtils::MakeMaker' => '6.11'
+                                                 'ExtUtils::MakeMaker' => '6.31'
                                                },
                        'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
-                       'BUILD_REQUIRES' => {},
-                       'ABSTRACT' => 'release tests for portability',
+                       'BUILD_REQUIRES' => {
+                                             'Test::More' => '0.94',
+                                             'Scalar::Util' => '0',
+                                             'English' => '0',
+                                             'File::Find' => '0',
+                                             'File::Temp' => '0',
+                                             'Carp' => '0'
+                                           },
+                       'ABSTRACT' => 'Release tests for portability',
                        'EXE_FILES' => [],
-                       'VERSION' => '1.100700',
+                       'VERSION' => '1.101420',
                        'PREREQ_PM' => {
-                                        'Scalar::Util' => '0',
-                                        'English' => '0',
-                                        'Carp' => '0',
-                                        'Test::More' => '0',
                                         'Test::Portability::Files' => '0',
-                                        'File::Find' => '0',
-                                        'File::Temp' => '0',
-                                        'Moose' => '0',
-                                        'Dist::Zilla::Plugin::InlineFiles' => '0'
+                                        'Dist::Zilla::Plugin::InlineFiles' => '0',
+                                        'Moose' => '0'
                                       },
                        'LICENSE' => 'perl'
                      );
 
 
-delete $WriteMakefileArgs{LICENSE}
-  unless eval { ExtUtils::MakeMaker->VERSION(6.31) };
+delete $WriteMakefileArgs{BUILD_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.56) };
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
 WriteMakefile(%WriteMakefileArgs);
 
